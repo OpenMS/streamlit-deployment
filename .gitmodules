@@ -1,0 +1,3 @@
+[submodule "example_app"]
+	path = example_app
+	url = https://github.com/OpenMS/streamlit-template.git

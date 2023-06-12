@@ -4,10 +4,11 @@ services:
   streamlit:
     build: 
       context: .
-      dockerfile: ./compose/streamlit/Dockerfile
-    image: streamlit_local
-    container_name: streamlit_app
+      dockerfile: ./NAME_OF_APP1/Dockerfile
+    image: NAME_OF_APP1
+    container_name: NAME_OF_APP1
     restart: always
     ports:
       - 8501:8501
-    command: streamlit run app/app_6.py
+    command: streamlit run NAME_OF_APP1/app.py
+  #TODO: test second app
