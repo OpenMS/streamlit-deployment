@@ -2,7 +2,6 @@
 
 ## Requirements
 - Docker Compose
-- Python 3.9
 
 ## Deployment
 
