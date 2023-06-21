@@ -1,14 +1,24 @@
 version: '3.8'
 
 services:
-  streamlit:
+  streamlitappsimple:
     build: 
-      context: .
-      dockerfile: ./NAME_OF_APP1/Dockerfile
-    image: NAME_OF_APP1
-    container_name: NAME_OF_APP1
+      context: ./example_app
+      dockerfile: Dockerfile_simple
+    image: exampleappsimple
+    container_name: exampleappsimple
     restart: always
     ports:
       - 8501:8501
-    command: streamlit run NAME_OF_APP1/app.py
-  #TODO: test second app
+    command: streamlit run example_app/app.py
+  streamlitappwithbatteriesincluded:
+    build: 
+      context: ./example_app
+      dockerfile: Dockerfile
+    image: exampleappwithbatteriesincluded
+    container_name: exampleappwithbatteriesincluded
+    restart: always
+    ports:
+      - 8502:8501 # use different host port (here: 8502) to allow multiple apps running on same server.
+    command: streamlit run example_app/app.py    
+  
