@@ -9,5 +9,5 @@
 `git submodule init`
 `git submodule update`
 - add your app as service to the docker compose file
-- run docker compose `docker-compose -f local.yml up --build`
+- run docker compose `docker-compose up --build`
 
