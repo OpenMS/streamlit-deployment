@@ -1,24 +1,23 @@
 version: '3.8'
 
 services:
-  streamlitappsimple:
-    build: 
-      context: ./openms-streamlit-template
-      dockerfile: Dockerfile_simple
-    image: exampleappsimple
-    container_name: exampleappsimple
-    restart: always
-    ports:
-      - 85011:8501
-    command: streamlit run openms-streamlit-template/app.py
-  streamlitappwithbatteriesincluded:
+  openms-streamlit-template:
     build: 
       context: ./openms-streamlit-template
       dockerfile: Dockerfile
-    image: exampleappwithbatteriesincluded
-    container_name: exampleappwithbatteriesincluded
+    image: openms_streamlit_template
+    container_name: openms-streamlit-template
     restart: always
     ports:
-      - 85012:8501 # use different host port with five digits (here: 85012) to allow multiple apps running on same server.
-    command: streamlit run openms-streamlit-template/app.py    
-  
+      - 85011:8501 # use different host port with five digits (here: 85011) to allow multiple apps running on same server.
+    command: streamlit run openms-streamlit-template/app.py
+  umetaflow:
+    build:
+      context: ./umetaflow-gui
+      dockerfile: Dockerfile
+    image: umetaflow_app
+    container_name: umetaflow-app
+    restart: always
+    ports:
+      - 85012:8501
+    command: streamlit run umetaflow-gui/Home.py
