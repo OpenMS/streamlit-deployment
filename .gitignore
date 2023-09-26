@@ -1,6 +1,9 @@
 # Workspaces
-workspaces-umetaflow-gui
-workspaces-streamlit-template
+workspaces-streamlit-template/*
+!workspaces-streamlit-template/.gitkeep
+
+workspaces-umetaflow-gui/*
+!workspaces-umetaflow-gui/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
