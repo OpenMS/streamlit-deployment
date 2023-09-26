@@ -9,7 +9,9 @@ services:
     container_name: openms-streamlit-template
     restart: always
     ports:
-      - 85011:8501 # use different host port with five digits (here: 85011) to allow multiple apps running on same server.
+      - 8502:8501 # use different host port (here: 8502) to allow multiple apps running on same server.
+    volumes:
+      - ./workspaces-streamlit-template:/app/workspaces-streamlit-template
     command: streamlit run openms-streamlit-template/app.py
   umetaflow:
     build:
@@ -19,5 +21,7 @@ services:
     container_name: umetaflow-app
     restart: always
     ports:
-      - 85012:8501
+      - 8503:8501
+    volumes:
+      - ./workspaces-umetaflow-gui:/app/workspaces-umetaflow-gui
     command: streamlit run umetaflow-gui/Home.py
