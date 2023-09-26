@@ -1,3 +1,6 @@
-[submodule "example_app"]
-	path = example_app
+[submodule "openms-streamlit-template"]
+	path = openms-streamlit-template
 	url = https://github.com/OpenMS/streamlit-template.git
+[submodule "umetaflow-gui"]
+	path = umetaflow-gui
+	url = https://github.com/axelwalter/umetaflow-gui.git
