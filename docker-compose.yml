@@ -4,7 +4,7 @@ services:
   openms-streamlit-template:
     build: 
       context: ./openms-streamlit-template
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile_simple
     image: openms_streamlit_template
     container_name: openms-streamlit-template
     restart: always
