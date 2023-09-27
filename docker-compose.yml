@@ -2,16 +2,16 @@ version: '3.8'
 
 services:
   openms-streamlit-template:
-    build: 
+    build:
       context: ./openms-streamlit-template
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile_simple
     image: openms_streamlit_template
     container_name: openms-streamlit-template
     restart: always
     ports:
       - 8502:8501 # use different host port (here: 8502) to allow multiple apps running on same server.
     volumes:
-      - ./workspaces-streamlit-template:/app/workspaces-streamlit-template
+      - workspaces-streamlit-template:/app/workspaces-streamlit-template
     command: streamlit run openms-streamlit-template/app.py
   umetaflow:
     build:
@@ -23,5 +23,8 @@ services:
     ports:
       - 8503:8501
     volumes:
-      - ./workspaces-umetaflow-gui:/app/workspaces-umetaflow-gui
+      - workspaces-umetaflow-gui:/app/workspaces-umetaflow-gui
     command: streamlit run umetaflow-gui/Home.py
+volumes:
+  workspaces-streamlit-template:
+  workspaces-umetaflow-gui:

@@ -15,9 +15,6 @@
 
 `git submodule add url-to-git-repository name-of-app`
 
-- add your app as service to the docker compose file
-- add workspace directories with `.gitkeep` file
-- add your locally mounted workspaces directory to `.gitignore` file while keeping `.gitkeep` file
 - run docker compose `docker-compose up --build -d`
 
 ## Update your App
@@ -35,3 +32,5 @@
 `git commit -m "updated submodule"`
 
 `git push origin main`
+
+- run docker compose `docker-compose up --build -d`
