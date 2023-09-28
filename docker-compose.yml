@@ -11,7 +11,7 @@ services:
     ports:
       - 8502:8501 # use different host port (here: 8502) to allow multiple apps running on same server.
     volumes:
-      - workspaces-streamlit-template:/app/workspaces-streamlit-template
+      - workspaces-streamlit-template:/workspaces-streamlit-template
     command: streamlit run openms-streamlit-template/app.py
   umetaflow:
     build:
@@ -23,7 +23,7 @@ services:
     ports:
       - 8503:8501
     volumes:
-      - workspaces-umetaflow-gui:/app/workspaces-umetaflow-gui
+      - workspaces-umetaflow-gui:/workspaces-umetaflow-gui
     command: streamlit run umetaflow-gui/Home.py
 volumes:
   workspaces-streamlit-template:
