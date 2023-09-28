@@ -19,6 +19,7 @@
 
 ## Update your App
 
+### Update submodules
 `cd your-app-submodule-directory`
 
 `git pull origin main`
@@ -33,4 +34,5 @@
 
 `git push origin main`
 
+### Update running containers
 - run docker compose `docker-compose up --build -d`
