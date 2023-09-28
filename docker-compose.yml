@@ -5,6 +5,8 @@ services:
     build:
       context: ./openms-streamlit-template
       dockerfile: Dockerfile_simple
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
     image: openms_streamlit_template
     container_name: openms-streamlit-template
     restart: always
@@ -17,6 +19,8 @@ services:
     build:
       context: ./umetaflow-gui
       dockerfile: Dockerfile
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
     image: umetaflow_app
     container_name: umetaflow-app
     restart: always

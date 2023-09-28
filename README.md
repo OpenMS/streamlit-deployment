@@ -8,6 +8,7 @@
 
 `git submodule update`
 
+- to include Windows executables, create a `.env` file and write a variable with valid Github token such as `GITHUB_TOKEN=yourgithubtoken
 - run docker compose `docker-compose up --build -d`
 
 ## Add new App
@@ -35,4 +36,5 @@
 `git push origin main`
 
 ### Update running containers
+- to include Windows executables, create a `.env` file and write a variable with valid Github token such as `GITHUB_TOKEN=yourgithubtoken`
 - run docker compose `docker-compose up --build -d`
