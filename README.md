@@ -19,7 +19,7 @@
 
 `git submodule add url-to-git-repository name-of-app`
 
-- uüdate containers
+- update containers
 
 ### Update your App
 
