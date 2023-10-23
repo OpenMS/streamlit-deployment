@@ -29,6 +29,21 @@ services:
     volumes:
       - workspaces-umetaflow-gui:/workspaces-umetaflow-gui
     command: streamlit run umetaflow-gui/Home.py
+  nuxl-app:
+    build:
+      context: ./nuxl-app
+      dockerfile: Dockerfile
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+    image: nuxl_app
+    container_name: nuxl-app
+    restart: always
+    ports:
+      - 28504:8501 # increment port numbers (here 28503)
+    volumes:
+      - workspaces-nuxl-app:/workspaces-nuxl-app
+    command: streamlit run nuxl-app/run.py
 volumes:
   workspaces-streamlit-template:
   workspaces-umetaflow-gui:
+  workspaces-nuxl-app:

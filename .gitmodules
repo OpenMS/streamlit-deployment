@@ -4,3 +4,6 @@
 [submodule "umetaflow-gui"]
 	path = umetaflow-gui
 	url = https://github.com/axelwalter/umetaflow-gui.git
+[submodule "nuxl-app"]
+	path = nuxl-app
+	url = git@github.com:Arslan-Siraj/nuxl-app.git
