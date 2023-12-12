@@ -43,7 +43,21 @@ services:
     volumes:
       - workspaces-nuxl-app:/workspaces-nuxl-app
     command: streamlit run nuxl-app/run.py
+  FLASHViewer:
+    build:
+      context: ./FLASHViewer
+      dockerfile: Dockerfile
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+    image: flashviewer
+    container_name: flashviewer
+    restart: always
+    ports:
+      - 28505:8501 # increment port numbers (here 28505)
+    volumes:
+      - workspaces-flashviewer:/app/workspaces
 volumes:
   workspaces-streamlit-template:
   workspaces-umetaflow-gui:
   workspaces-nuxl-app:
+  workspaces-flashviewer:
