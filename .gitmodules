@@ -7,3 +7,6 @@
 [submodule "nuxl-app"]
 	path = nuxl-app
 	url = git@github.com:Arslan-Siraj/nuxl-app.git
+[submodule "FLASHViewer"]
+	path = FLASHViewer
+	url = https://github.com/JeeH-K/FLASHViewer
