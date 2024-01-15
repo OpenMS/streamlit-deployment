@@ -6,7 +6,7 @@
 	url = https://github.com/axelwalter/umetaflow-gui.git
 [submodule "nuxl-app"]
 	path = nuxl-app
-	url = git@github.com:Arslan-Siraj/nuxl-app.git
+	url = https://github.com/Arslan-Siraj/nuxl-app
 [submodule "FLASHViewer"]
 	path = FLASHViewer
 	url = https://github.com/JeeH-K/FLASHViewer
