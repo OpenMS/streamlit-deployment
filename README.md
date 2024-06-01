@@ -10,7 +10,7 @@ Multiple streamlit apps based on the [OpenMS streamlit template](https://github.
 ## Requirements
 - Docker Compose
 
-## Deployment
+## Deployment (e.g., needed after one app changed)
 
 **1. Make sure submodules are up-to-data.**
 
