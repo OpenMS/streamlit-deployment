@@ -7,10 +7,3 @@
 [submodule "nuxl-app"]
 	path = nuxl-app
 	url = https://github.com/Arslan-Siraj/nuxl-app
-[submodule "FLASHViewer"]
-	path = FLASHViewer
-	url = https://github.com/JeeH-K/FLASHViewer
-[submodule "FLASHTaggerViewer"]
-	path = FLASHTaggerViewer
-	url = git@github.com:t0mdavid-m/FLASHViewer.git
-	branch = TaggerViewerDeploy
