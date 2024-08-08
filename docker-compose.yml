@@ -53,25 +53,26 @@ services:
     container_name: flashviewer
     restart: always
     ports:
-      - 28505:8501 # increment port numbers (here 28505)
+      - 28506:8501 # increment port numbers (here 28506)
     volumes:
-      - workspaces-flashviewer:/app/workspaces
-  FLASHTaggerViewer:
+      - workspaces-flashviewer:/workspaces-flashviewer
+  naseweis:
     build:
-      context: ./FLASHTaggerViewer
+      context: ./naseweis
       dockerfile: Dockerfile
       args:
         GITHUB_TOKEN: $GITHUB_TOKEN
-    image: flashtaggerviewer
-    container_name: flashtaggerviewer
+    image: naseweis
+    container_name: naseweis
     restart: always
     ports:
-      - 28506:8501 # increment port numbers (here 28506)
+      - 28507:8501 # increment port numbers (here 28507)
     volumes:
-      - workspaces-flashtaggerviewer:/workspaces-flashtaggerviewer
+      - workspaces-naseweis:/workspaces-naseweis
 volumes:
   workspaces-streamlit-template:
   workspaces-umetaflow-gui:
   workspaces-nuxl-app:
   workspaces-flashviewer:
-  workspaces-flashtaggerviewer:
+  workspaces-naseweis:
+  

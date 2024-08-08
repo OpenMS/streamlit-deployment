@@ -9,8 +9,8 @@
 	url = https://github.com/Arslan-Siraj/nuxl-app
 [submodule "FLASHViewer"]
 	path = FLASHViewer
-	url = https://github.com/JeeH-K/FLASHViewer
-[submodule "FLASHTaggerViewer"]
-	path = FLASHTaggerViewer
 	url = https://github.com/t0mdavid-m/FLASHViewer
 	branch = TaggerViewerDeploy
+[submodule "naseweis"]
+	path = naseweis
+	url = https://github.com/poshul/nase-weis
