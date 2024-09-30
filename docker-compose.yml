@@ -56,7 +56,7 @@ services:
       -  28505:8501 
     volumes:
       - workspaces-PTMScanner:/workspaces-PTMScanner
-    command: command: streamlit run PTMScanner/run.py
+    command: streamlit run PTMScanner/run.py
   FLASHViewer:
     build:
       context: ./FLASHViewer
