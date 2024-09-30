@@ -43,6 +43,20 @@ services:
     volumes:
       - workspaces-nuxl-app:/workspaces-nuxl-app
     command: streamlit run nuxl-app/run.py
+  PTMScanner: 
+    build: 
+    context: ./PTMScanner
+    dockerfile: Dockerfile 
+    args: 
+        GITHUB_TOKEN: $GITHUB_TOKEN
+    image: 
+    container_name: 
+    restarts: always
+    ports: 
+      -  28505:8501 
+    volumes:
+      - 
+  command: 
   FLASHViewer:
     build:
       context: ./FLASHViewer
