@@ -14,6 +14,3 @@
 [submodule "naseweis"]
 	path = naseweis
 	url = https://github.com/poshul/nase-weis
-[submodule "PTMScanner"]
-	path = PTMScanner
-	url = https://github.com/JohannesvKL/PTMScanner
