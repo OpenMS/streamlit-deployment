@@ -83,6 +83,20 @@ services:
       - 28507:8501 # increment port numbers (here 28507)
     volumes:
       - workspaces-naseweis:/workspaces-naseweis
+  stream-sage:
+    build:
+      context: ./StreamSage
+      dockerfile: Dockerfile
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+    image: stream_sage
+    container_name: stream-sage
+    restart: always
+    ports:
+      - 28508:8501 # increment port numbers (here 28508)
+    volumes:
+      - workspaces-stream-sage:/workspaces-stream-sage
+    command: streamlit run StreamSage/app.py
 volumes:
   workspaces-streamlit-template:
   workspaces-umetaflow-gui:
@@ -90,4 +104,5 @@ volumes:
   workspaces-flashviewer:
   workspaces-naseweis:
   workspaces-PTMScanner: 
+  workspaces-stream-sage:
   
