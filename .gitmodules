@@ -17,3 +17,6 @@
 [submodule "PTMScanner"]
 	path = PTMScanner
 	url = https://github.com/OpenMS/PTMScanner.git
+[submodule "StreamSage"]
+	path = StreamSage
+	url = https://github.com/singjc/StreamSage.git

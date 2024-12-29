@@ -31,6 +31,7 @@ Create a temporary `.env` file with your Github token. It should contain only on
 `docker compose build`
 
 > Make sure to remove the `.env` file with your Github token after successfull build
+> Optionally use the `--no-cache` flag to prevent caching
 
 > Optionally use the `--no-cache` flag to prevent caching
 
