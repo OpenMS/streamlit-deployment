@@ -28,9 +28,10 @@ Create a temporary `.env` file with your Github token. It should contain only on
 
 **3. Run docker-compose.**
 
-`docker-compose up --build -d`
+`docker compose build`
 
 > Make sure to remove the `.env` file with your Github token after successfull build
+> Optionally use the `--no-cache` flag to prevent caching
 
 ## Add new app
 
@@ -73,7 +74,7 @@ Check and update the following entries:
 
 Run docker-compose to launch all services.
 
-`docker-compose up --build -d`
+` docker compose up -d`
 
 - there should be no errors building all services
 - make sure all apps are accessible via their port from localhost
