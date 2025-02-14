@@ -96,7 +96,19 @@ services:
       - 28508:8501 # increment port numbers (here 28508)
     volumes:
       - workspaces-stream-sage:/workspaces-stream-sage
-    command: streamlit run StreamSage/app.py
+    command: streamlit run StreamSage/app.py  
+  peakstorm:
+    build:
+      context: ./peakstorm
+      dockerfile: Dockerfile
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+    image: peakstorm
+    container_name: peakstorm
+    restart: always
+    ports:
+      - 28509:8501 # increment port numbers (here 28509)
+    command: streamlit run PeakStorm/app.py
 volumes:
   workspaces-streamlit-template:
   workspaces-umetaflow-gui:

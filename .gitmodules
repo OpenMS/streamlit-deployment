@@ -20,3 +20,6 @@
 [submodule "StreamSage"]
 	path = StreamSage
 	url = https://github.com/singjc/StreamSage.git
+[submodule "peakstorm"]
+	path = peakstorm
+	url = https://github.com/OpenMS/streamlit-deployment.git
