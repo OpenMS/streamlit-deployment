@@ -20,7 +20,7 @@ Multiple streamlit apps based on the [OpenMS streamlit template](https://github.
 
 **2. Specify GitHub token (to download Windows executables).**
 
-> This is **important**! Ommitting this step while result in all apps not having the option to download exetutables any more.
+> This is **important**! Omitting this step while result in all apps not having the option to download executables any more.
 
 Create a temporary `.env` file with your Github token. It should contain only one line:
 
