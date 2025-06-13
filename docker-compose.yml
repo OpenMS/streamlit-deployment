@@ -131,6 +131,4 @@ volumes:
   workspaces-naseweis:
   workspaces-PTMScanner: 
   workspaces-stream-sage:
-  workspaces-peakstorm:
   workspaces-mzcalculator:
-  
