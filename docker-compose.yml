@@ -109,6 +109,20 @@ services:
     ports:
       - 28509:8501 # increment port numbers (here 28509)
     command: streamlit run PeakStorm/app.py
+  mzcalculator:
+    build:
+      context: ./mzcalculator
+      dockerfile: Dockerfile_simple
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+    image: mzcalculator
+    container_name: mzcalculator
+    restart: always
+    ports:
+      - 28510:8501 # increment port numbers (here 28510)
+    volumes:
+      - workspaces-mzcalculator:/workspaces-mzcalculator
+    command: streamlit run mzcalculator/app.py
 volumes:
   workspaces-streamlit-template:
   workspaces-umetaflow-gui:
@@ -117,4 +131,6 @@ volumes:
   workspaces-naseweis:
   workspaces-PTMScanner: 
   workspaces-stream-sage:
+  workspaces-peakstorm:
+  workspaces-mzcalculator:
   
