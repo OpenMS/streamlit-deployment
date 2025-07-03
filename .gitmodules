@@ -23,3 +23,6 @@
 [submodule "peakstorm"]
 	path = peakstorm
 	url = https://github.com/t0mdavid-m/PeakStorm.git
+[submodule "mzcalculator"]
+	path = mzcalculator
+	url = https://github.com/OpenMS/mz-calculator.git
