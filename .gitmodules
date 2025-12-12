@@ -28,4 +28,4 @@
 	url = https://github.com/OpenMS/mz-calculator.git
 [submodule "toppview-lite"]
 	path = toppview-lite
-	url = git@github.com:t0mdavid-m/TOPPView-Lite.git
+	url = https://github.com/t0mdavid-m/TOPPView-Lite.git
