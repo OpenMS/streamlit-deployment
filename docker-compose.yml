@@ -109,20 +109,20 @@ services:
     ports:
       - 28509:8501 # increment port numbers (here 28509)
     command: streamlit run PeakStorm/app.py
-  mzcalculator:
+  toppview-lite:
     build:
-      context: ./mzcalculator
-      dockerfile: Dockerfile_simple
+      context: ./toppview-lite
+      dockerfile: Dockerfile
       args:
         GITHUB_TOKEN: $GITHUB_TOKEN
-    image: mzcalculator
-    container_name: mzcalculator
+    image: toppview-lite
+    container_name: toppview-lite
     restart: always
     ports:
       - 28510:8501 # increment port numbers (here 28510)
     volumes:
-      - workspaces-mzcalculator:/workspaces-mzcalculator
-    command: streamlit run mzcalculator/app.py
+      - workspaces-toppview-lite:/workspaces-toppview-lite
+    command: streamlit run toppview-lite/app.py
 volumes:
   workspaces-streamlit-template:
   workspaces-umetaflow-gui:
@@ -131,4 +131,4 @@ volumes:
   workspaces-naseweis:
   workspaces-PTMScanner: 
   workspaces-stream-sage:
-  workspaces-mzcalculator:
+  workspaces-toppview-lite:
