@@ -123,6 +123,20 @@ services:
     volumes:
       - workspaces-toppview-lite:/workspaces-toppview-lite
     command: streamlit run toppview-lite/app.py
+  mhcquant:
+    build:
+      context: ./mhcquant
+      dockerfile: Dockerfile
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+    image: mhcquant
+    container_name: mhcquant
+    restart: always
+    ports:
+      - 28512:8501 # increment port numbers (here 28512)
+    volumes:
+      - workspaces-toppview-lite:/workspaces-toppview-lite
+    command: streamlit run toppview-lite/app.py
 volumes:
   workspaces-streamlit-template:
   workspaces-umetaflow-gui:
@@ -132,3 +146,4 @@ volumes:
   workspaces-PTMScanner: 
   workspaces-stream-sage:
   workspaces-toppview-lite:
+  workspaces-mhcquant:

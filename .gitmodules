@@ -29,3 +29,6 @@
 [submodule "toppview-lite"]
 	path = toppview-lite
 	url = https://github.com/t0mdavid-m/TOPPView-Lite.git
+[submodule "mhcquant"]
+	path = mhcquant
+	url = https://github.com/jonasscheid/openms-streamlit-template.git
