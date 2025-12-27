@@ -119,7 +119,7 @@ services:
     container_name: toppview-lite
     restart: always
     ports:
-      - 28510:8501 # increment port numbers (here 28510)
+      - 28513:8501 # increment port numbers (here 28513)
     volumes:
       - workspaces-toppview-lite:/workspaces-toppview-lite
     command: streamlit run toppview-lite/app.py
