@@ -122,6 +122,7 @@ services:
       - 28513:8501 # increment port numbers (here 28513)
     volumes:
       - workspaces-toppview-lite:/workspaces-toppview-lite
+      - shared-exports:/shared-exports
     command: streamlit run toppview-lite/app.py
   mhcquant:
     build:
@@ -136,6 +137,7 @@ services:
       - 28512:8501 # increment port numbers (here 28512)
     volumes:
       - workspaces-toppview-lite:/workspaces-toppview-lite
+      - shared-exports:/shared-exports
     command: streamlit run toppview-lite/app.py
 volumes:
   workspaces-streamlit-template:
@@ -147,3 +149,4 @@ volumes:
   workspaces-stream-sage:
   workspaces-toppview-lite:
   workspaces-mhcquant:
+  shared-exports:
