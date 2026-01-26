@@ -139,6 +139,21 @@ services:
       - workspaces-toppview-lite:/workspaces-toppview-lite
       - shared-exports:/shared-exports
     command: streamlit run toppview-lite/app.py
+  quantms:
+    build:
+      context: ./quantms
+      dockerfile: Dockerfile
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+    image: quantms
+    container_name: quantms
+    restart: always
+    ports:
+      - 28511:8501 # increment port numbers (here 28512)
+    volumes:
+      - workspaces-quantms:/workspaces-quantms
+    command: streamlit run toppview-lite/app.py
+
 volumes:
   workspaces-streamlit-template:
   workspaces-umetaflow-gui:
@@ -149,4 +164,5 @@ volumes:
   workspaces-stream-sage:
   workspaces-toppview-lite:
   workspaces-mhcquant:
+  workspace-quantms:
   shared-exports:

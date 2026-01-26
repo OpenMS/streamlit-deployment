@@ -32,3 +32,6 @@
 [submodule "mhcquant"]
 	path = mhcquant
 	url = https://github.com/jonasscheid/openms-streamlit-template.git
+[submodule "quantms"]
+	path = quantms
+	url = https://github.com/OpenMS/quantms-web.git
