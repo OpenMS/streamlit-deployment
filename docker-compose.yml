@@ -97,14 +97,14 @@ services:
     volumes:
       - workspaces-stream-sage:/workspaces-stream-sage
     command: streamlit run StreamSage/app.py  
-  peakstorm:
+  toolbox:
     build:
-      context: ./peakstorm
+      context: ./toolbox
       dockerfile: Dockerfile
       args:
         GITHUB_TOKEN: $GITHUB_TOKEN
-    image: peakstorm
-    container_name: peakstorm
+    image: toolbox
+    container_name: toolbox
     restart: always
     ports:
       - 28509:8501 # increment port numbers (here 28509)
@@ -164,5 +164,6 @@ volumes:
   workspaces-stream-sage:
   workspaces-toppview-lite:
   workspaces-mhcquant:
-  workspace-quantms:
+  workspaces-quantms:
+  workspaces-toolbox:
   shared-exports:

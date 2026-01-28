@@ -35,3 +35,6 @@
 [submodule "quantms"]
 	path = quantms
 	url = https://github.com/OpenMS/quantms-web.git
+[submodule "toolbox"]
+	path = toolbox
+	url = https://github.com/OpenMS/OpenMS-toolbox.git
