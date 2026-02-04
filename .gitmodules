@@ -1,16 +1,12 @@
 [submodule "openms-streamlit-template"]
 	path = openms-streamlit-template
 	url = https://github.com/OpenMS/streamlit-template.git
-[submodule "umetaflow-gui"]
-	path = umetaflow-gui
-	url = https://github.com/axelwalter/umetaflow-gui.git
 [submodule "nuxl-app"]
 	path = nuxl-app
 	url = https://github.com/Arslan-Siraj/nuxl-app
-[submodule "FLASHViewer"]
-	path = FLASHViewer
-	url = https://github.com/t0mdavid-m/FLASHViewer
-	branch = TaggerViewerDeploy
+[submodule "FLASHApp"]
+	path = FLASHApp
+	url = https://github.com/OpenMS/FLASHApp.git
 [submodule "naseweis"]
 	path = naseweis
 	url = https://github.com/poshul/nase-weis
