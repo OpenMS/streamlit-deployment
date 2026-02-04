@@ -15,20 +15,6 @@ services:
     volumes:
       - workspaces-streamlit-template:/workspaces-streamlit-template
     command: streamlit run openms-streamlit-template/app.py
-  umetaflow:
-    build:
-      context: ./umetaflow
-      dockerfile: Dockerfile
-      args:
-        GITHUB_TOKEN: $GITHUB_TOKEN
-    image: umetaflow_app
-    container_name: umetaflow-app
-    restart: always
-    ports:
-      - 28503:8501 # increment port numbers (here 28503)
-    volumes:
-      - workspaces-umetaflow:/workspaces-umetaflow
-    command: streamlit run umetaflow/Home.py
   nuxl-app:
     build:
       context: ./nuxl-app
@@ -57,19 +43,6 @@ services:
     volumes:
       - workspaces-PTMScanner:/workspaces-PTMScanner
     command: streamlit run PTMScanner/run.py
-  FLASHApp:
-    build:
-      context: ./FLASHApp
-      dockerfile: Dockerfile
-      args:
-        GITHUB_TOKEN: $GITHUB_TOKEN
-    image: flashapp
-    container_name: flashapp
-    restart: always
-    ports:
-      - 28506:8501 # increment port numbers (here 28506)
-    volumes:
-      - workspaces-flashapp:/workspaces-flashapp
   naseweis:
     build:
       context: ./naseweis
@@ -156,9 +129,7 @@ services:
 
 volumes:
   workspaces-streamlit-template:
-  workspaces-umetaflow:
   workspaces-nuxl-app:
-  workspaces-flashapp:
   workspaces-naseweis:
   workspaces-PTMScanner: 
   workspaces-stream-sage:

@@ -1,6 +1,9 @@
 [submodule "openms-streamlit-template"]
 	path = openms-streamlit-template
 	url = https://github.com/OpenMS/streamlit-template.git
+[submodule "umetaflow"]
+	path = umetaflow
+	url = https://github.com/OpenMS/umetaflow.git
 [submodule "nuxl-app"]
 	path = nuxl-app
 	url = https://github.com/Arslan-Siraj/nuxl-app
