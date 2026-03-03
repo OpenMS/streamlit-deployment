@@ -18,7 +18,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   umetaflow:
     build:
       context: ./umetaflow-gui
@@ -36,7 +36,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   nuxl-app:
     build:
       context: ./nuxl-app
@@ -54,7 +54,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   PTMScanner: 
     build: 
       context: ./PTMScanner
@@ -72,7 +72,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   FLASHViewer:
     build:
       context: ./FLASHViewer
@@ -89,7 +89,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   naseweis:
     build:
       context: ./naseweis
@@ -106,7 +106,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   stream-sage:
     build:
       context: ./StreamSage
@@ -124,7 +124,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   toolbox:
     build:
       context: ./toolbox
@@ -140,7 +140,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   toppview-lite:
     build:
       context: ./toppview-lite
@@ -159,7 +159,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   mhcquant:
     build:
       context: ./mhcquant
@@ -178,7 +178,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
   quantms:
     build:
       context: ./quantms
@@ -196,7 +196,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 10g
+          memory: 100g
 
 volumes:
   workspaces-streamlit-template:
