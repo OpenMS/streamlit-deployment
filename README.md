@@ -89,4 +89,4 @@ Run docker-compose to launch all services.
 
 ### `STREAMLIT_SERVER_COUNT`
 
-Controls the number of Streamlit server instances per app with nginx load balancing. Set to `10` for all services.
+Controls the number of parallel Streamlit server instances per app. When set to more than `1`, nginx load balancing is enabled automatically.
