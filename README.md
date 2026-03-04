@@ -6,6 +6,7 @@ Multiple streamlit apps based on the [OpenMS streamlit template](https://github.
 
 - deploy all OpenMS apps at once
 - user data (in workspaces) is stored in persistent docker volumes for each app
+- load balancing via nginx across multiple Streamlit server instances per app (controlled by `STREAMLIT_SERVER_COUNT`)
 
 ## Requirements
 - Docker Compose
@@ -83,3 +84,9 @@ Run docker-compose to launch all services.
 - test functionality of your app
 
 **7. Make a pull request with your changes to OpenMS/streamlit-deployment main branch.**
+
+## Environment Variables
+
+### `STREAMLIT_SERVER_COUNT`
+
+Controls the number of parallel Streamlit server instances per app. When set to more than `1`, nginx load balancing is enabled automatically.

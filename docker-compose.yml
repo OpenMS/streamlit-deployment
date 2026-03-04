@@ -10,6 +10,8 @@ services:
     image: openms_streamlit_template
     container_name: openms-streamlit-template
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28502:8501 # use different host port (here: 28502) to allow multiple apps running on same server.
     volumes:
@@ -28,6 +30,8 @@ services:
     image: umetaflow_app
     container_name: umetaflow-app
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28503:8501 # increment port numbers (here 28503)
     volumes:
@@ -46,6 +50,8 @@ services:
     image: nuxl_app
     container_name: nuxl-app
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28504:8501 # increment port numbers (here 28504)
     volumes:
@@ -64,6 +70,8 @@ services:
     image: ptmscanner_app
     container_name: PTMScanner
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports: 
       -  28505:8501 
     volumes:
@@ -82,6 +90,8 @@ services:
     image: flashviewer
     container_name: flashviewer
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28506:8501 # increment port numbers (here 28506)
     volumes:
@@ -99,6 +109,8 @@ services:
     image: naseweis
     container_name: naseweis
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28507:8501 # increment port numbers (here 28507)
     volumes:
@@ -116,6 +128,8 @@ services:
     image: stream_sage
     container_name: stream-sage
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28508:8501 # increment port numbers (here 28508)
     volumes:
@@ -134,6 +148,8 @@ services:
     image: toolbox
     container_name: toolbox
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28509:8501 # increment port numbers (here 28509)
     command: streamlit run PeakStorm/app.py
@@ -150,6 +166,8 @@ services:
     image: toppview-lite
     container_name: toppview-lite
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28513:8501 # increment port numbers (here 28513)
     volumes:
@@ -169,6 +187,8 @@ services:
     image: mhcquant
     container_name: mhcquant
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28512:8501 # increment port numbers (here 28512)
     volumes:
@@ -188,6 +208,8 @@ services:
     image: quantms
     container_name: quantms
     restart: always
+    environment:
+      - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28511:8501 # increment port numbers (here 28512)
     volumes:
