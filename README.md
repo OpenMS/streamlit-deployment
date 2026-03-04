@@ -6,6 +6,7 @@ Multiple streamlit apps based on the [OpenMS streamlit template](https://github.
 
 - deploy all OpenMS apps at once
 - user data (in workspaces) is stored in persistent docker volumes for each app
+- load balancing via nginx across multiple Streamlit server instances per app (controlled by `STREAMLIT_SERVER_COUNT`)
 
 ## Requirements
 - Docker Compose
@@ -83,3 +84,14 @@ Run docker-compose to launch all services.
 - test functionality of your app
 
 **7. Make a pull request with your changes to OpenMS/streamlit-deployment main branch.**
+
+## Environment Variables
+
+### `STREAMLIT_SERVER_COUNT`
+
+Each service in `docker-compose.yml` is configured with `STREAMLIT_SERVER_COUNT=10`. This variable (defined in the [OpenMS streamlit-template Dockerfile](https://github.com/OpenMS/streamlit-template/blob/main/Dockerfile)) controls the number of Streamlit server instances started per app.
+
+- When set to `1` (the default): a single Streamlit instance is started and served directly on port 8501.
+- When set to `>1`: multiple Streamlit instances are started on internal ports (8510, 8511, …) and an nginx reverse proxy with cookie-based sticky session load balancing is placed in front, listening on port 8501.
+
+Setting `STREAMLIT_SERVER_COUNT=10` means each app runs 10 parallel Streamlit instances, which significantly improves throughput and responsiveness under concurrent user load.
