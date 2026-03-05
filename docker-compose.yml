@@ -36,6 +36,7 @@ services:
       - 28503:8501 # increment port numbers (here 28503)
     volumes:
       - workspaces-umetaflow-gui:/workspaces-umetaflow-gui
+      - /local/abi/projects/streamlit-deployment/demos/umetaflow/:/app/example-data/workspaces/
     command: streamlit run umetaflow-gui/Home.py
     deploy:
       resources:
@@ -152,7 +153,7 @@ services:
       - STREAMLIT_SERVER_COUNT=10
     ports:
       - 28509:8501 # increment port numbers (here 28509)
-    command: streamlit run PeakStorm/app.py
+    command: streamlit run toolbox/app.py
     deploy:
       resources:
         limits:
@@ -172,6 +173,7 @@ services:
       - 28513:8501 # increment port numbers (here 28513)
     volumes:
       - workspaces-toppview-lite:/workspaces-toppview-lite
+      - /local/abi/projects/streamlit-deployment/demos/toppview_lite/:/app/example-data/workspaces/
       - shared-exports:/shared-exports
     command: streamlit run toppview-lite/app.py
     deploy:
@@ -194,6 +196,7 @@ services:
     volumes:
       - workspaces-toppview-lite:/workspaces-toppview-lite
       - shared-exports:/shared-exports
+      - /local/abi/projects/streamlit-deployment/demos/mhcquant/:/app/example-data/workspaces/
     command: streamlit run toppview-lite/app.py
     deploy:
       resources:
@@ -214,6 +217,7 @@ services:
       - 28511:8501 # increment port numbers (here 28512)
     volumes:
       - workspaces-quantms:/workspaces-quantms
+      - /local/abi/projects/streamlit-deployment/demos/quantms/:/app/example-data/workspaces/
     command: streamlit run toppview-lite/app.py
     deploy:
       resources:
