@@ -13,7 +13,7 @@
 	branch = TaggerViewerDeploy
 [submodule "naseweis"]
 	path = naseweis
-	url = https://github.com/poshul/nase-weis
+	url = https://github.com/OpenMS/nase-weis.git
 [submodule "PTMScanner"]
 	path = PTMScanner
 	url = https://github.com/OpenMS/PTMScanner.git

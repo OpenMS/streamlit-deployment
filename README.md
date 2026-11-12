@@ -9,7 +9,7 @@ Multiple streamlit apps based on the [OpenMS streamlit template](https://github.
 - load balancing via nginx across multiple Streamlit server instances per app (controlled by `STREAMLIT_SERVER_COUNT`)
 
 ## Requirements
-- Docker Compose
+- Docker Compose v2 with BuildKit (required by the NASEWEIS build)
 
 ## Deployment (e.g., needed after one app changed)
 
@@ -35,6 +35,23 @@ Create a temporary `.env` file with your Github token. It should contain only on
 > Optionally use the `--no-cache` flag to prevent caching
 
 > Optionally use the `--no-cache` flag to prevent caching
+
+## Update NASEWEIS
+
+After pulling this repository, synchronize the transferred submodule URL and
+check out the pinned NASEWEIS revision:
+
+```bash
+git submodule sync -- naseweis
+git submodule update --init -- naseweis
+DOCKER_BUILDKIT=1 docker compose build naseweis
+docker compose up -d --no-deps naseweis
+```
+
+Provide `GITHUB_TOKEN` as described above when building; NASEWEIS requires
+BuildKit and passes the token as a build secret. The service retains port `28507`
+and the existing `workspaces-naseweis` volume, mounted at the new app's workspace path
+`/workspaces-streamlit-template`.
 
 ## Add new app
 

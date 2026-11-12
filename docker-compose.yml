@@ -105,17 +105,18 @@ services:
     build:
       context: ./naseweis
       dockerfile: Dockerfile
-      args:
-        GITHUB_TOKEN: $GITHUB_TOKEN
+      secrets:
+        - github_token
     image: naseweis
     container_name: naseweis
     restart: always
     environment:
       - STREAMLIT_SERVER_COUNT=10
+      - WORKSPACES_DIR=/workspaces-streamlit-template
     ports:
       - 28507:8501 # increment port numbers (here 28507)
     volumes:
-      - workspaces-naseweis:/workspaces-naseweis
+      - workspaces-naseweis:/workspaces-streamlit-template
     deploy:
       resources:
         limits:
@@ -223,6 +224,10 @@ services:
       resources:
         limits:
           memory: 100g
+
+secrets:
+  github_token:
+    environment: GITHUB_TOKEN
 
 volumes:
   workspaces-streamlit-template:
